@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "merging", "merging\merging.csproj", "{CD659355-C636-474F-BF1B-318D13E5C034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unittests", "unittests\unittests.csproj", "{4C0C12FA-BA79-49B0-9F76-5D9A69F41FA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "consoledebug", "consoledebug\consoledebug.csproj", "{3B4EEF1D-38E4-4B2E-B398-7292CFFB6778}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD659355-C636-474F-BF1B-318D13E5C034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD659355-C636-474F-BF1B-318D13E5C034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD659355-C636-474F-BF1B-318D13E5C034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD659355-C636-474F-BF1B-318D13E5C034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C0C12FA-BA79-49B0-9F76-5D9A69F41FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C0C12FA-BA79-49B0-9F76-5D9A69F41FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C0C12FA-BA79-49B0-9F76-5D9A69F41FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C0C12FA-BA79-49B0-9F76-5D9A69F41FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4EEF1D-38E4-4B2E-B398-7292CFFB6778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4EEF1D-38E4-4B2E-B398-7292CFFB6778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4EEF1D-38E4-4B2E-B398-7292CFFB6778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4EEF1D-38E4-4B2E-B398-7292CFFB6778}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
