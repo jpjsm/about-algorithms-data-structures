@@ -1,4 +1,4 @@
-﻿using merging;
+using merging;
 
 namespace consoledebug
 {
