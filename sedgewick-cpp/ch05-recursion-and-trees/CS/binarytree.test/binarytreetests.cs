@@ -17,6 +17,23 @@ public class BinaryTreeTests
     }
 
     [Theory]
+    [InlineData(new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }, new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 })]
+    [InlineData(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }, new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 })]
+    [InlineData(
+        new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 },
+        new int[] { 9,9,8,8,7,7,6,6,5,5,4,4,3,3,2,2,1,1,0,0 }
+    )]
+    public void ToListDescendingTest(int[] inserts, int[] expected)
+    {
+        BinaryTree<int> bt = new BinaryTree<int>(inserts[0]);
+        for (int i = 1; i < inserts.Length; i++)
+        {
+            bt.Insert(inserts[i]);
+        }
+        Assert.Equal(expected.ToList(), bt.ToListDescending());
+    }
+
+    [Theory]
     [InlineData(new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 9)]
     [InlineData(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 }, 9)]
     [InlineData(new int[] { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 9)]

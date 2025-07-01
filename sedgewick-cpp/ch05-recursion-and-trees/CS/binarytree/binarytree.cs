@@ -64,9 +64,9 @@ public class BinaryTree<T> where T : IComparable
     public List<T> ToListDescending()
     {
         List<T> results = new List<T>();
-        if (right != null) results.AddRange(right.ToListAscending());
+        if (right != null) results.AddRange(right.ToListDescending());
         results.AddRange(values);
-        if (left != null) results.AddRange(left.ToListAscending());
+        if (left != null) results.AddRange(left.ToListDescending());
         return results;
     }
 
@@ -148,6 +148,13 @@ public class BinaryTree<T> where T : IComparable
         if (n.right != null) leveltraverse(n.right, level + 1, levelnodes);
     }
 
+/// <summary>
+/// This helper function generates the list of indices to create a balanced tree
+/// from an ordered list.
+/// </summary>
+/// <param name="l">The left end of the partition</param>
+/// <param name="r">The right end of the partition</param>
+/// <returns>The list of indices to use to create a balanced tree.</returns>
     private static List<int> lrsplits(int l, int r)
     {
         List<int> results = new List<int>();
@@ -180,6 +187,11 @@ public class BinaryTree<T> where T : IComparable
         return results;
     }
 
+/// <summary>
+/// Calculate the height of the tree to the deepest leaf node.
+/// </summary>
+/// <param name="n">The top node to calculate height</param>
+/// <returns></returns>
     private static int height(BinaryTree<T> n)
     {
         int leftheight = 0;
