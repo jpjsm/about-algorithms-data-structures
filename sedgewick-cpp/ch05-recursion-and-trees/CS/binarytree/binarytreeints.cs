@@ -3,18 +3,14 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace binarytree;
 
-public class BinaryTree<T> where T : IComparable
+public class BinaryTreeInts: BinaryTree<int>
 {
-    private List<T> values = [];
-    private BinaryTree<T>? left = null;
-    private BinaryTree<T>? right = null;
+    private List<int> values = [];
+    private BinaryTree<int>? left = null;
+    private BinaryTree<int>? right = null;
 
-    public T Value => values[0];
-    public int Height => TreeHeight(this);
 
-    public bool ValueExists(T v) => Exists(v, this, []);
-
-    public BinaryTree(T value)
+    public BinaryTreeInts(int value)
     {
         values.Add(value);
     }
@@ -57,6 +53,8 @@ public class BinaryTree<T> where T : IComparable
         }
     }
 
+
+
     public List<T> ToListAscending()
     {
         List<T> results = new List<T>();
@@ -75,17 +73,17 @@ public class BinaryTree<T> where T : IComparable
         return results;
     }
 
-    public List<(int level,T item)> ToListLevelTraverse(int whichLevel=-1)
+    public List<(int level,T item)> ToListLevelTraverse(int whichlevel=-1)
     {
         List<(int level,T item)> results = [];
-        Dictionary<int, List<T>> levelNodes = [];
-        LevelTraverse(this, 0, levelNodes);
+        Dictionary<int, List<T>> levelnodes = [];
+        LevelTraverse(this, 0, levelnodes);
 
-        if (whichLevel == -1) // list all levels in ascending order 
+        if (whichlevel == -1) // list all levels in ascending order 
         {
-            foreach (int level in levelNodes.Keys.Order())
+            foreach (int level in levelnodes.Keys.Order())
             {
-                foreach (T item in levelNodes[level])
+                foreach (T item in levelnodes[level])
                 {
                     results.Add((level, item));
                 }
@@ -93,11 +91,11 @@ public class BinaryTree<T> where T : IComparable
         }
         else
         {
-            if (levelNodes.ContainsKey(whichLevel))
+            if (levelnodes.ContainsKey(whichlevel))
             {
-                foreach (T item in levelNodes[whichLevel])
+                foreach (T item in levelnodes[whichlevel])
                 {
-                    results.Add((whichLevel, item));
+                    results.Add((whichlevel, item));
                 }
             }
         }
@@ -283,16 +281,16 @@ public class BinaryTree<T> where T : IComparable
                 throw new ApplicationException("CompareTo method returns value different than -1, 0, 1.");
         }
     }
-    private static void LevelTraverse(BinaryTree<T> n, int level, Dictionary<int, List<T>> levelNodes)
+    private static void LevelTraverse(BinaryTree<T> n, int level, Dictionary<int, List<T>> levelnodes)
     {
-        if (!levelNodes.ContainsKey(level))
+        if (!levelnodes.ContainsKey(level))
         {
-            levelNodes[level] = [];
+            levelnodes[level] = [];
         }
 
-        levelNodes[level].AddRange(n.values);
-        if (n.left != null) LevelTraverse(n.left, level + 1, levelNodes);
-        if (n.right != null) LevelTraverse(n.right, level + 1, levelNodes);
+        levelnodes[level].AddRange(n.values);
+        if (n.left != null) LevelTraverse(n.left, level + 1, levelnodes);
+        if (n.right != null) LevelTraverse(n.right, level + 1, levelnodes);
     }
 
 /// <summary>
