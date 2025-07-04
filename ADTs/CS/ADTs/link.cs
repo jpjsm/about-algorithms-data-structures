@@ -1,4 +1,4 @@
-﻿namespace jpjsm.link;
+namespace jpjsm.ADTs;
 
 public class Link<T> where T: IComparable<T>
 {

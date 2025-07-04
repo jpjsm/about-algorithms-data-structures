@@ -1,4 +1,4 @@
-namespace jpjsm.BT.test;
+namespace jpjsm.ADTs.test;
 
 public class BTTest
 {

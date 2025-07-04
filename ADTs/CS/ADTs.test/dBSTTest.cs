@@ -1,4 +1,4 @@
-namespace jpjsm.dBST.test;
+namespace jpjsm.ADTs.test;
 
 #pragma warning disable IDE1006 // Naming Styles
 public class dBSTTest

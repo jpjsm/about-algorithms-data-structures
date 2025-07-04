@@ -1,6 +1,6 @@
-﻿namespace linklist;
+namespace jpjsm.ADTs;
 
-public class Class1
+public class LinkList
 {
 
 }

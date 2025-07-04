@@ -1,6 +1,5 @@
-﻿namespace jpjsm.BST;
+namespace jpjsm.ADTs;
 
 public class BST
 {
-
 }

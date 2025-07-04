@@ -1,6 +1,6 @@
-namespace dlinklist.test;
+namespace jpjsm.ADTs.test;
 
-public class UnitTest1
+public class dLinkListTest
 {
     [Fact]
     public void Test1()

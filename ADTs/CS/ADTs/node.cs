@@ -1,6 +1,6 @@
-﻿namespace node;
+namespace jpjsm.ADTs;
 
-public class Class1
+public class Node
 {
 
 }
